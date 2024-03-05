@@ -1,0 +1,79 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f2f2f2;
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.login {
+    cursor: pointer;
+}
+
+/* Container styles */
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Request list table styles */
+.request-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.request-list th, .request-list td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.request-list th{
+    background-color: #f2f2f2;
+}
+
+.request-list tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.request-list tbody tr:hover {
+    background-color: #e3e3e3;
+}
+
+/* Button styles */
+.accept-btn, .decline-btn {
+    padding: 6px 12px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.decline-btn {
+    background-color: #f44336;
+}

@@ -1,0 +1,152 @@
+/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f2f2f2;
+}
+
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.login {
+    cursor: pointer;
+}
+
+
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.user-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-list th, .user-list td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-list th {
+    background-color: #f2f2f2;
+}
+
+.user-list tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.user-list tbody tr:hover {
+    background-color: #e3e3e3;
+}
+
+.user-list img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+
+.admin-actions button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.admin-actions button:hover {
+    background-color: #555;
+}
+*/
+
+/* Styles for the navigation bar */
+.navbar {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar .login {
+    float: right;
+  }
+  
+  /* Styles for the container */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .container h2 {
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for the user list */
+  .user-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-list th, .user-list td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .user-list th {
+    background-color: #f2f2f2;
+  }
+  
+  .user-list img {
+    width: 50px;
+    height: auto;
+  }
+  
+  /* Styles for the admin actions */
+  .admin-actions {
+    margin-top: 20px;
+  }
+  
+  .admin-actions button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .admin-actions button:last-child {
+    margin-right: 0;
+  }
+  
