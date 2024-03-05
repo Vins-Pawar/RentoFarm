@@ -5,7 +5,6 @@ $user = $_SESSION['user'];
 if (!isset($user))
     header("location:login.php?msg=Please Login");
 else {
-    
 }
 ?>
 <!DOCTYPE html>
@@ -194,8 +193,12 @@ else {
                     xhr.onreadystatechange = function() {
                         if (xhr.readyState === XMLHttpRequest.DONE) {
                             if (xhr.status === 200) {
-                                console.log(xhr.responseText);
-                                displayNotification('Item Added to Cart');
+                                var response = JSON.parse(xhr.responseText);
+                                if (response.success) {
+                                    displayNotification('Item Added to Cart');
+                                } else {
+                                    displayNotification('Error: ' + response.message);
+                                }
                             } else {
                                 displayNotification('Error: ' + xhr.status);
                             }
