@@ -1,0 +1,105 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Manage Users - Rento Farm Admin</title>
+    <link rel="stylesheet" href="managestyle.css"> 
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Rento Farm</div>
+        <div class="login">Login</div>
+    </div>
+    <div class="container">
+        <h2>Manage Users</h2>
+        <div class="user-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Bio</th>
+                        <th>Contact</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     <tr>
+                        <td>Pradip85</td>
+                        <td>Pradip Vishwas Shinde</td>
+                        <td>pradipshinde7385@gmail.com</td>
+                        <td>Lorem ipsum dolor sit amet</td>
+                        <td>8308514242</td>
+                        <td><img src="/Photo.jpg" alt="User Image"></td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+        <div class="admin-actions">
+            <button id="block-user">Block User</button>
+            <button id="remove-user">Remove User</button>
+        </div>
+    </div>
+</body>
+</html>-->
+<!-- manage.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Manage Users - Rento Farm Admin</title>
+    <link rel="stylesheet" href="managestyle.css"> 
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Rento Farm</div>
+        <div class="login">Login</div>
+    </div>
+    <div class="container">
+        <h2>Manage Users</h2>
+        <div class="user-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Bio</th>
+                        <th>Contact</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody id="user-table-body">
+                    <!-- User data will be populated dynamically here -->
+                </tbody>
+            </table>
+        </div>
+        <div class="admin-actions">
+            <button id="block-user">Block User</button>
+            <button id="remove-user">Remove User</button>
+        </div>
+    </div>
+
+    <script>
+        // Fetch users from server and populate table
+        fetch('/users')
+            .then(response => response.json())
+            .then(users => {
+                const userTableBody = document.getElementById('user-table-body');
+                users.forEach(user => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${user.username}</td>
+                        <td>${user.fullName}</td>
+                        <td>${user.email}</td>
+                        <td>${user.bio}</td>
+                        <td>${user.contact}</td>
+                        <td><img src="${user.image}" alt="User Image"></td>
+                    `;
+                    userTableBody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching users:', error));
+    </script>
+</body>
+</html>

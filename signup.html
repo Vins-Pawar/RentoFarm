@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="style/signup.css">
+    <title>SignUp</title>
+</head>
+
+<body>
+
+    <form action="checkMail.php" method="post">
+        <div class="container">
+            <h1>Sign Up </h1>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+
+            <div>
+                <label for="cpassword">Conform Password</label>
+                <input type="password" name="cpassword" id="cpassword" required>
+            </div>
+
+            <button type="submit">Sign Up</button>
+        </div>
+
+    </form>
+</body>
+
+</html>
