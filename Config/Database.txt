@@ -1,0 +1,23 @@
+Database-->RentoFarm
+
+Table-->adminlogin
+    -email pk
+    -Password 
+
+Table-->cart
+    cart_id PK
+    user_id FK register
+    user_id FK quipment
+    equipment_id 
+    quantity
+    price
+    created_at
+
+Table-->equipment
+    -id PrimaryKey
+    name	
+    description	
+    price
+    image_path	
+
+Table-->register
