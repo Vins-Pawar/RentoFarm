@@ -17,7 +17,7 @@
         }
          
         //  $passmatch=password_verify($pass,$hashpass);
-      echo $pass+" "+$hashpass;
+    //  echo $pass+" "+$hashpass;
 
          if($pass==$hashpass)
          {
